@@ -13,18 +13,15 @@
 
 # ✨ Portfolio Website
 
->반응형 웹사이트 제작
-
->언어 : HTML, CSS, JAVASCRIPT, JQUERY
-
->라이브러리 : swiper slide, gsap
-
->프로그램 : 피그마, 비주얼스튜디오코드
+    반응형 웹사이트 제작
+    기술 : HTML, CSS, JAVASCRIPT, JQUERY, swiper slide, gsap
+    프로그램 : 피그마, 비주얼스튜디오코드
+    링크 : 
 
 
 ---
 
-## 🔍 Self Code Review
+## 🔍 Self Review
 
 ### 📁 1. 파일 구조 및 구성
 - [x] 역할별로 디렉토리 분리 (`/css`, `/js`, `/images`)
@@ -34,12 +31,19 @@
 ---
 
 ### 🧱 2. HTML 리뷰
-- [x]  의미론적 태그를 적절히 사용 (`<article>`, `<section>`, `<header>`, `<main>`, `<nav>` 등)
+```html
+<div id="header"></div>
+    
+     <div id="main">
+            <div id="smoother-wrapper">
+               <div id="smoother-content">
+```
+- [ ]  의미론적 태그를 적절히 사용이 부족함 (`<article>`, `<section>`, `<header>`, `<main>`, `<nav>` 등)
+- `div id="main"` 의 `div`대신 `main`태그 사용이 필요함
 - [ ]  heading 태그는 순차적으로 구조화 진행 (`<h1>` `<h2>` `<h3>` ..)
 - [x] 모든 이미지에 `alt` 속성 적용
 - [x] 폼 요소에 `label` 연결 완료
 - [ ] `<h1>`이 여러 번 사용됨 → 하나만 사용하도록 구조 변경 예정
-- [x] HTML 유효성 검사 통과 (W3C Validator 사용)
 - [ ] 링크(<a>)안에 버튼(<button>) 태그 사용  a태그만 사용 예정
 
 ---
@@ -52,6 +56,19 @@
 ---
 
 ### ⚙️ 4. JavaScript 리뷰
+```javascript
+var $main_visual = $(".main_visual .main_slider");
+  var $visualList = $(".main_visual .main_slider .slide_box > div");
+  var $visual_length = $visualList.length;
+  var _visualNum = 0;
+  var _visualIn = 0;
+  var setT = 0;
+  var bool = true;
+  // var paging=$visualList.eq(targets);
+  var idx = $(this).index();
+```
+- 자바스크립트와 제이쿼리 구분을 위해 변수명 앞에 $ 추가함
+
 - [x] 메뉴 토글, 스크롤 애니메이션 등 기능 구현 완료
 - [ ] 함수 네이밍 일부 추상적 (예: `handle1()`) → 의미 있는 이름으로 리팩토링 예정
 - [x] 코드 모듈화 완료 (기능별 함수 분리)
@@ -79,20 +96,16 @@
 - $(".use-checkbox-bottom").change(function ()... on('change', function(){ 을 이용하여 동적으로 처리되도록 변경
 - 반복되는 선택자를 변수로 지정하여 요소의 효율을 높여주는게 좋음.  $(".use-checkbox-bottom")
 
-
 ---
 
-### 🚀 5. 성능 최적화
-- [x] 접속시 바로 로딩 없음
-- [x] 외부 라이브러리 제거 (필수 기능만 자체 구현)
-- [ ] CSS 코드 일부 압축 필요
-
----
-
-### 🎯 6. UX/UI 측면
+### 🎯 5. UX/UI 측면
 - [x] 인터랙션 요소에 호버 및 포커스 스타일 제공
 - [x] 모바일 환경에서 메뉴가 터치로 작동함
 - [ ] 디자인 시각적 계층 구조 명확함
+
+<img src="https://github.com/user-attachments/assets/3934e497-461f-4bd4-9e6b-bc286d2ebf24" style="width: 500px;"/>
+
+- [ ] PPL과 영상 보러갈 수 있도록 링크 추가
 
 ---
 
