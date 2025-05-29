@@ -34,25 +34,25 @@
 ---
 
 ### 🧱 2. HTML 리뷰
-- [x] 시맨틱 태그 사용 (`<header>`, `<nav>`, `<main>`, `<footer>`)
+- [x]  의미론적 태그를 적절히 사용 (`<article>`, `<section>`, `<header>`, `<main>`, `<nav>` 등)
+- [ ]  heading 태그는 순차적으로 구조화 진행 (`<h1>` `<h2>` `<h3>` ..)
 - [x] 모든 이미지에 `alt` 속성 적용
 - [x] 폼 요소에 `label` 연결 완료
 - [ ] `<h1>`이 여러 번 사용됨 → 하나만 사용하도록 구조 변경 예정
 - [x] HTML 유효성 검사 통과 (W3C Validator 사용)
+- [ ] 링크(<a>)안에 버튼(<button>) 태그 사용  a태그만 사용 예정
 
 ---
 
 ### 🎨 3. CSS 리뷰
-- [x] 클래스 네이밍에 BEM 방식 사용
 - [x] 중복 스타일 최소화 및 공통 클래스 추출
 - [x] 반응형 웹 완성 (미디어 쿼리 사용)
-- [ ] 색상 변수 정의 누락 → SCSS나 CSS 변수 도입 고려 중
+- [ ] 초기값, 공통된 요소 하나의 페이지에서 모두 작성 → reset.css, common.css분리하여 정리 예정
 
 ---
 
 ### ⚙️ 4. JavaScript 리뷰
 - [x] 메뉴 토글, 스크롤 애니메이션 등 기능 구현 완료
-- [x] 불필요한 DOM 접근 제거 및 캐싱 처리
 - [ ] 함수 네이밍 일부 추상적 (예: `handle1()`) → 의미 있는 이름으로 리팩토링 예정
 - [x] 코드 모듈화 완료 (기능별 함수 분리)
 ```javascript
@@ -83,8 +83,7 @@
 ---
 
 ### 🚀 5. 성능 최적화
-- [x] 이미지 WebP 포맷 변환 및 크기 최적화
-- [x] 모든 스크립트에 `defer` 적용
+- [x] 접속시 바로 로딩 없음
 - [x] 외부 라이브러리 제거 (필수 기능만 자체 구현)
 - [ ] CSS 코드 일부 압축 필요
 
@@ -93,15 +92,15 @@
 ### 🎯 6. UX/UI 측면
 - [x] 인터랙션 요소에 호버 및 포커스 스타일 제공
 - [x] 모바일 환경에서 메뉴가 터치로 작동함
-- [ ] 로딩 시 피드백 없음 → 로딩 애니메이션 추가 예정
+- [ ] 디자인 시각적 계층 구조 명확함
 
 ---
 
 ## 🛠️ 개선 계획 (To-Do)
 - [ ] `<h1>` 태그 구조 개선
 - [ ] JavaScript 함수명 정비
-- [ ] 색상 변수화
 - [ ] 로딩 애니메이션 추가
+- [ ] 불필요한 font파일 제거
 
 ---
 
@@ -110,11 +109,7 @@
 - [Lighthouse Performance Check (Chrome DevTools)](https://developer.chrome.com/docs/lighthouse/overview/)
 - [Wave Accessibility Checker](https://wave.webaim.org/)
 
----
 
-## 📸 Screenshots
 
-| Desktop | Mobile |
-|--------|--------|
-| ![desktop](./screenshots/desktop.png) | ![mobile](./screenshots/mobile.png) |
+ 
 
